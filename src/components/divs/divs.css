@@ -1,0 +1,126 @@
+.containerflex {
+  display: flex;
+  max-width: 100%;
+  flex-direction: row;
+}
+
+#leftDiv {
+  background-color: orange;
+  width: 20vw;
+  height: 100vh;
+  margin-left: 10vw;
+}
+
+#rightDiv {
+  background-color: green;
+  width: 60vw;
+  height: 100vh;
+  overflow-x: auto;
+}
+
+.formCard {
+  background-color: white;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  margin-top: auto;
+  padding: 20px;
+  position: relative;
+  top: 40vh;
+}
+
+#formStyle .form-control input[type="text"] {
+  margin: 10px 0;
+  border: 0;
+  border-bottom: 1px solid #b4becb;
+  width: 100%;
+  padding: 3px;
+  font-size: 16px;
+}
+#formStyle .form-control input[type="number"] {
+  margin: 10px 0;
+  border: 0;
+  border-bottom: 1px solid #b4becb;
+  width: 100%;
+  padding: 3px;
+  font-size: 16px;
+}
+
+#formStyle .form-control input:focus {
+  outline: none;
+}
+
+#formStyle {
+  margin-left: 1vw;
+}
+
+h1,
+p {
+  text-align: center;
+  color: whitesmoke;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  cursor: pointer;
+  background-color: orange;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  transform: scale(0.98);
+}
+
+table {
+  border: 1px solid black;
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background: white;
+}
+
+th {
+  height: 70%;
+  border: 1px solid black;
+}
+
+td {
+  text-align: center;
+  border: 1px solid black;
+}
+
+tr:hover {
+  background-color: coral;
+}
+
+tr:nth-child(even) {
+  background-color: #5a5050;
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 1024px) {
+  .containerflex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  #rightDiv {
+    width: 500px;
+    height: 100vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+
+  #leftDiv {
+    width: 500px;
+    height: 100vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+}
