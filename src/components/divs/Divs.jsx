@@ -33,6 +33,12 @@ function EntryForm({ addEntryToBook }) {
     addEntryToBook({ contactFirstName, contactLastName, contactPhoneNumber });
   };
 
+  function save() {
+    console.log("clicked");
+    <EntryForm addEntryToBook={addEntryToBook} />;
+    console.log(EntryForm);
+  }
+
   return (
     <div>
       <div id="leftDiv">
@@ -40,7 +46,7 @@ function EntryForm({ addEntryToBook }) {
           <div id="formStyle">
             <h2>Enter Details</h2>
             <div className="form-control">
-              <form onSubmit={handleSubmit}>
+              <form id="contact-form" onSubmit={handleSubmit}>
                 <label>
                   <input
                     type="text"
@@ -64,13 +70,16 @@ function EntryForm({ addEntryToBook }) {
                 <label>
                   <input
                     type="text"
-                    name="firstName"
-                    placeholder="First Name"
+                    name="phoneNumber"
+                    placeholder="Phone Number"
                     value={contactPhoneNumber}
                     onChange={(e) => setContactPhoneNumber(e.target.value)}
                     required
                   />
                 </label>
+                <button type="submit" className="btn">
+                  ADD
+                </button>
               </form>
             </div>
           </div>
